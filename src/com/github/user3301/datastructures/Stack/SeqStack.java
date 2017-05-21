@@ -36,13 +36,13 @@ public class SeqStack<T> implements Stack<T> {
     @Override
     public void push(T data) {
         if(array.length==size) {
-            expandCapacity(size=10);
+            ensureCapacity(size=10);
         }
         array[++top] =data;
         size++;
     }
 
-    private void expandCapacity(int newCapacity) {
+    private void ensureCapacity(int newCapacity) {
         if(newCapacity<this.capacity)
             return;
         T[] oldArray = array;
