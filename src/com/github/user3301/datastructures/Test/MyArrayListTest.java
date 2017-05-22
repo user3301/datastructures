@@ -3,6 +3,8 @@ package com.github.user3301.datastructures.Test;
 import com.github.user3301.datastructures.List.MyArrayList;
 import org.junit.Test;
 
+import java.util.Iterator;
+
 import static org.junit.Assert.assertEquals;
 
 
@@ -50,5 +52,14 @@ public class MyArrayListTest {
         myArrayList.add(2);
         myArrayList.trimToSize();
         assertEquals(2,myArrayList.getData().length);
+    }
+
+    public void myIteratorTest() {
+        MyArrayList myArrayList = new MyArrayList();
+        myArrayList.add(1);
+        myArrayList.add(2);
+        Iterator iterator = myArrayList.iterator();
+        assertEquals(2,iterator.next());
+        assertEquals(false,iterator.hasNext());
     }
 }

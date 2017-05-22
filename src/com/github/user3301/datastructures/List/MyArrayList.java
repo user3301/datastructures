@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 /**
  * Created by Zhelun Gai on 21/5/17.
  */
-public class MyArrayList<T> implements Iterable<T>{
+public class MyArrayList<T> implements Iterable<T> {
     private static final int DEFAULT_CAPCITY = 10;
     private int size;
     private T[] data;
@@ -22,6 +22,7 @@ public class MyArrayList<T> implements Iterable<T>{
 
     /**
      * constructor 2
+     *
      * @param capacity
      */
     public MyArrayList(int capacity) {
@@ -30,6 +31,7 @@ public class MyArrayList<T> implements Iterable<T>{
 
     /**
      * constructor 3
+     *
      * @param collection
      */
     public MyArrayList(Collection<T> collection) {
@@ -42,7 +44,7 @@ public class MyArrayList<T> implements Iterable<T>{
     }
 
     public boolean isEmpty() {
-        return getSize()==0;
+        return getSize() == 0;
     }
 
     public T[] getData() {
@@ -50,21 +52,21 @@ public class MyArrayList<T> implements Iterable<T>{
     }
 
     public T get(int index) {
-        if (index<0||index>=getSize()) {
+        if (index < 0 || index >= getSize()) {
             throw new ArrayIndexOutOfBoundsException();
         }
         return this.data[index];
     }
 
     public void add(T element) {
-        if(getSize()+1>=this.data.length) {
-            ensureCapacity(size*2+1);
+        if (getSize() + 1 >= this.data.length) {
+            ensureCapacity(size * 2 + 1);
         }
         this.data[size++] = element;
     }
 
     private void ensureCapacity(int newCapacity) {
-        if(newCapacity<this.size)
+        if (newCapacity < this.size)
             return;
         T[] old = data;
         data = (T[]) new Object[newCapacity];
@@ -76,15 +78,15 @@ public class MyArrayList<T> implements Iterable<T>{
     public void remove(T element) {
         int index = indexOf(element);
         for (int i = index; i < getSize(); i++) {
-            data[i] = data[i+1];
+            data[i] = data[i + 1];
         }
         size--;
     }
 
     public int indexOf(T element) {
         int index = 0;
-        for (int i = 0; i <getSize(); i++) {
-            if(data[i]==element) {
+        for (int i = 0; i < getSize(); i++) {
+            if (data[i] == element) {
                 index = i;
             }
         }
@@ -95,24 +97,27 @@ public class MyArrayList<T> implements Iterable<T>{
     }
 
     public void trimToSize() {
-        if (getSize()<data.length) {
+        if (getSize() < data.length) {
             ensureCapacity(getSize());
         }
     }
 
-
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new MyIterator<T>();
     }
 
-    @Override
-    public void forEach(Consumer<? super T> action) {
+    private class MyIterator<T> implements Iterator<T> {
+        private int current;
+        @Override
+        public boolean hasNext() {
+            return current<MyArrayList.this.getSize();
+        }
 
-    }
-
-    @Override
-    public Spliterator<T> spliterator() {
-        return null;
+        @Override
+        public T next() {
+            return (T) MyArrayList.this.get(current++);
+        }
     }
 }
+
