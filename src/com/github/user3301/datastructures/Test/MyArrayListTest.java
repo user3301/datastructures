@@ -61,5 +61,8 @@ public class MyArrayListTest {
         Iterator iterator = myArrayList.iterator();
         assertEquals(2,iterator.next());
         assertEquals(false,iterator.hasNext());
+        iterator.remove();
+        myArrayList.trimToSize();
+        assertEquals(1,myArrayList.getSize());
     }
 }

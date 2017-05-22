@@ -118,6 +118,11 @@ public class MyArrayList<T> implements Iterable<T> {
         public T next() {
             return (T) MyArrayList.this.get(current++);
         }
+
+        @Override
+        public void remove() {
+             MyArrayList.this.remove(get(current--));
+        }
     }
 }
 
