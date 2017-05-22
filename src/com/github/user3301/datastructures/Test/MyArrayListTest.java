@@ -42,4 +42,13 @@ public class MyArrayListTest {
         myArrayList.add(new Integer(1));
         assertEquals(1,myArrayList.get(0));
     }
+
+    @Test
+    public void trimToSizeTest() {
+        MyArrayList myArrayList = new MyArrayList(3);
+        myArrayList.add(1);
+        myArrayList.add(2);
+        myArrayList.trimToSize();
+        assertEquals(2,myArrayList.getData().length);
+    }
 }

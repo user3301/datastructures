@@ -45,6 +45,10 @@ public class MyArrayList<T> implements Iterable<T>{
         return getSize()==0;
     }
 
+    public T[] getData() {
+        return this.data;
+    }
+
     public T get(int index) {
         if (index<0||index>=getSize()) {
             throw new ArrayIndexOutOfBoundsException();
@@ -77,7 +81,7 @@ public class MyArrayList<T> implements Iterable<T>{
         size--;
     }
 
-    private int indexOf(T element) {
+    public int indexOf(T element) {
         int index = 0;
         for (int i = 0; i <getSize(); i++) {
             if(data[i]==element) {
@@ -88,6 +92,12 @@ public class MyArrayList<T> implements Iterable<T>{
 //            throw new IndexOutOfBoundsException();
 //        }
         return index;
+    }
+
+    public void trimToSize() {
+        if (getSize()<data.length) {
+            ensureCapacity(getSize());
+        }
     }
 
 
