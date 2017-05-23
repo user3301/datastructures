@@ -1,6 +1,6 @@
 package com.github.user3301.datastructures.Test;
 
-import com.github.user3301.datastructures.List.MyArrayList;
+import com.github.user3301.datastructures.List.ArrayList.MyArrayList;
 import org.junit.Test;
 
 import java.util.Iterator;

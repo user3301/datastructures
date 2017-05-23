@@ -1,9 +1,7 @@
-package com.github.user3301.datastructures.List;
+package com.github.user3301.datastructures.List.ArrayList;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
 
 /**
  * Created by Zhelun Gai on 21/5/17.
