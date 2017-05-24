@@ -7,7 +7,7 @@ package com.github.user3301.datastructures.Queue;
 public class QueueWithArray<E> {
     private int front=-1,back = -1;
     private E[] array;
-    private static int size = 0;
+    private int size = 0;
 
     public QueueWithArray(int size) {
         array = (E[]) new Object[size];
@@ -27,8 +27,10 @@ public class QueueWithArray<E> {
 
     public void enqueue(E element) {
         if(isFull()) {
-            System.out.println("The queue is full!");
-            return;
+            ensureCapacity();
+            back += back;
+            array[back] = element;
+            size++;
         }
         else if(isEmpty()) {
             front = back = 0;
@@ -40,6 +42,17 @@ public class QueueWithArray<E> {
             array[back] = element;
             size++;
         }
+    }
+
+    public void ensureCapacity() {
+        QueueWithArray queueWithArray = new QueueWithArray(size*2);
+        for (int i = 0; i < array.length; i++) {
+            queueWithArray.array[i] = array[i];
+        }
+        front = 0;
+        back = size;
+        this.array = (E[]) queueWithArray.array;
+
     }
 
     public void dequeue() {

@@ -24,4 +24,14 @@ public class QueueWithArrayTest {
         queueWithArray.dequeue();
         assertEquals(0,queueWithArray.getSize());
     }
+
+    @Test
+    public void ensureCapacityTest() {
+        QueueWithArray queueWithArray = new QueueWithArray(2);
+        queueWithArray.enqueue(1);
+        queueWithArray.enqueue(2);
+        queueWithArray.enqueue(3);
+        assertEquals(3,queueWithArray.getSize());
+
+    }
 }
