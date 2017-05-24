@@ -18,7 +18,7 @@ public class QueueWithArray<E> {
     }
 
     public boolean isFull() {
-        return back==array.length;
+        return size==array.length;
     }
 
     public int getSize() {
@@ -28,7 +28,6 @@ public class QueueWithArray<E> {
     public void enqueue(E element) {
         if(isFull()) {
             ensureCapacity();
-            back += back;
             array[back] = element;
             size++;
         }

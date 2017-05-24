@@ -30,4 +30,12 @@ public class CircularArrayQueueImplTest {
         circularArrayQueue.dequeue();
         assertEquals(0,circularArrayQueue.getSize());
     }
+
+    @Test
+    public void ensureCapacityTest() {
+        CircularArrayQueueImpl circularArrayQueue = new CircularArrayQueueImpl(2);
+        circularArrayQueue.enqueue(1);
+        circularArrayQueue.enqueue(2);
+        circularArrayQueue.enqueue(3);
+    }
 }

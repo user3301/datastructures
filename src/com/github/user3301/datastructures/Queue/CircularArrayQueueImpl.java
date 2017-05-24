@@ -32,14 +32,26 @@ public class CircularArrayQueueImpl<E> {
             size++;
         }
         else if(isFull()) {
-            System.out.println("The queue is full!");
-            return;
+            ensureCapacity();
+            array[back] = element;
+            size++;
         }
         else {
             back+=back;
             array[back] = element;
             size++;
         }
+    }
+
+    public void ensureCapacity() {
+        CircularArrayQueueImpl circularArrayQueue = new CircularArrayQueueImpl(size*2);
+        for (int i = 0; i < array.length; i++) {
+            circularArrayQueue.array[i] = array[i];
+        }
+        front = 0;
+        back = size;
+        this.array = (E[]) circularArrayQueue.array;
+
     }
 
     public void dequeue() {
