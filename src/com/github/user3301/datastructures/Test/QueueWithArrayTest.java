@@ -6,7 +6,7 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
 /**
- * Created by Stan on 24/5/17.
+ * Created by Zhelun Gai on 24/5/17.
  */
 public class QueueWithArrayTest {
 

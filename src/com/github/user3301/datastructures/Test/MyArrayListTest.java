@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 
 /** MyArrayList Junit test
- * Created by Stan on 21/5/17.
+ * Created by Zhelun Gai on 21/5/17.
  */
 public class MyArrayListTest {
 

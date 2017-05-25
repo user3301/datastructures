@@ -3,7 +3,7 @@ package com.github.user3301.datastructures.Stack;
 import java.util.EmptyStackException;
 
 /** implementation of sequence stack using array
- * Created by Stan on 20/5/17.
+ * Created by Zhelun Gai on 20/5/17.
  */
 public class SeqStack<T> implements Stack<T> {
 
