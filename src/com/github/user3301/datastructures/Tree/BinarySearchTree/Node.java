@@ -8,7 +8,6 @@ public class Node{
     private int element;
     private Node leftNode;
     private Node rightNode;
-    private int size;
 
     public Node (int root) {
        this(root,null,null);
@@ -44,11 +43,4 @@ public class Node{
         this.rightNode = rightNode;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
 }

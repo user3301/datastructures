@@ -11,7 +11,7 @@ import static junit.framework.TestCase.assertEquals;
 public class BinarySearchTreeTest {
 
     @Test
-    public void displayTest() {
+    public void Test() {
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         binarySearchTree.insert(1);
         binarySearchTree.insert(2);
@@ -22,5 +22,7 @@ public class BinarySearchTreeTest {
         binarySearchTree.display(binarySearchTree.getRoot());
         assertEquals(true,binarySearchTree.find(4));
         assertEquals(false,binarySearchTree.find(7));
+        assertEquals(true,binarySearchTree.delete(1));
+        assertEquals(true,binarySearchTree.delete(4));
     }
 }
