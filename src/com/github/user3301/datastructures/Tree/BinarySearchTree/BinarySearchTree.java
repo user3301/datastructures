@@ -162,6 +162,26 @@ public class BinarySearchTree {
         return successsor;
     }
 
+    public int finMin(Node root) throws Exception {
+        if(this.getRoot()==null)  {
+            throw new NoSuchElementException();
+        }
+        else if(root.getLeftNode()==null) {
+            return root.getElement();
+        }
+        return finMin(root.getLeftNode());
+    }
+
+    public int findMax(Node root) {
+        if(this.getRoot()==null) {
+            throw new NoSuchElementException();
+        }
+        else if(root.getRightNode()==null) {
+            return root.getElement();
+        }
+        return findMax(root.getRightNode());
+    }
+
 
     public Node getRoot() {
         return root;
