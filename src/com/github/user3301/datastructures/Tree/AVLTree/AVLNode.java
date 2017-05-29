@@ -8,10 +8,10 @@ package com.github.user3301.datastructures.Tree.AVLTree;
  */
 public class AVLNode {
 
-    private Comparable data;
-    private AVLNode leftNode;
-    private AVLNode rightNode;
-    private int height;
+     Comparable data;
+     AVLNode leftNode;
+     AVLNode rightNode;
+     int height;
 
     //constructor
     public AVLNode(Comparable data) {
@@ -20,4 +20,16 @@ public class AVLNode {
         this.rightNode = null;
         this.height = 0;
     }
+
+    public AVLNode(Comparable data, AVLNode leftNode, AVLNode rightNode) {
+        this.data = data;
+        this.leftNode = leftNode;
+        this.rightNode = rightNode;
+        this.height = 0;
+    }
+
+    public static int height(AVLNode t) {
+        return t==null?-1:t.height;
+    }
+
 }
