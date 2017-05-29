@@ -7,7 +7,7 @@ import java.util.Iterator;
  * Created by Zhelun Gai on 21/5/17.
  */
 public class MyArrayList<T> implements Iterable<T> {
-    private static final int DEFAULT_CAPCITY = 10;
+    private static final int DEFAULT_CAPACITY = 10;
     private int size;
     private T[] data;
 
@@ -15,7 +15,7 @@ public class MyArrayList<T> implements Iterable<T> {
      * constructor 1
      */
     public MyArrayList() {
-        this.data = (T[]) new Object[DEFAULT_CAPCITY];
+        this.data = (T[]) new Object[DEFAULT_CAPACITY];
     }
 
     /**
