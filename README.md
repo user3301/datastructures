@@ -1,4 +1,4 @@
-# datastructures
+# Data Structures
 some simple data structures implementation by java programming language
 
 # Big O Notation & Complexity
