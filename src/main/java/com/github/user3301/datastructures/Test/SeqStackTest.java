@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Zhelun Gai on 20/5/17.
+ * Created by User3301 on 20/5/17.
  */
 public class SeqStackTest {
 

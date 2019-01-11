@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Iterator;
 
 /**
- * Created by Zhelun Gai on 21/5/17.
+ * Created by User3301 on 21/5/17.
  */
 public class MyArrayList<T> implements Iterable<T> {
     private static final int DEFAULT_CAPACITY = 10;
@@ -100,24 +100,20 @@ public class MyArrayList<T> implements Iterable<T> {
         }
     }
 
-    @Override
     public Iterator<T> iterator() {
         return new MyIterator<T>();
     }
 
     private class MyIterator<T> implements Iterator<T> {
         private int current;
-        @Override
         public boolean hasNext() {
             return current<MyArrayList.this.getSize();
         }
 
-        @Override
         public T next() {
             return (T) MyArrayList.this.get(current++);
         }
 
-        @Override
         public void remove() {
              MyArrayList.this.remove(get(current--));
         }

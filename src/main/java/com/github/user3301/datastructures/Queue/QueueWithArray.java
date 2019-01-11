@@ -2,7 +2,7 @@ package com.github.user3301.datastructures.Queue;
 
 
 /**
- * Created by Zhelun Gai on 24/5/17.
+ * Created by User3301 on 24/5/17.
  */
 public class QueueWithArray<E> {
     private int front=-1,back = -1;

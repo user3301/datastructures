@@ -3,7 +3,7 @@ package com.github.user3301.datastructures.Tree.BinarySearchTree;
 import java.util.NoSuchElementException;
 
 /**
- * Created by Zhelun Gai on 26/5/17.
+ * Created by User3301 on 26/5/17.
  *  Thanks to http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/
  */
 public class BinarySearchTree {

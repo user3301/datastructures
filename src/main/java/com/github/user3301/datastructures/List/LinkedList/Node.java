@@ -1,7 +1,7 @@
 package com.github.user3301.datastructures.List.LinkedList;
 
 /**
- * Created by Zhelun Gai on 23/5/17.
+ * Created by User3301 on 23/5/17.
  */
 public class Node<T> {
     public T element;

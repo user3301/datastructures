@@ -6,7 +6,7 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
 /**
- * Created by Zhelun Gai on 23/5/17.
+ * Created by User3301 on 23/5/17.
  */
 public class MyLinkedListTest {
 

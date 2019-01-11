@@ -1,7 +1,7 @@
 package com.github.user3301.datastructures.Tree.AVLTree;
 
 /**
- * Created by Zhelun Gai on 28/5/17.
+ * Created by User3301 on 28/5/17.
  *
  * as all the comparison method is based on the CompareTo method, so the data in
  * the node is the implementation of the interface Comparable

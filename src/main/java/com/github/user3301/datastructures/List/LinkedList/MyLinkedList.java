@@ -3,7 +3,7 @@ package com.github.user3301.datastructures.List.LinkedList;
 import java.util.*;
 
 /**
- * Created by Zhelun Gai on 23/5/17.
+ * Created by User3301 on 23/5/17.
  */
 public class MyLinkedList<T> {
     private Node<T> header = new Node<T>(null,null,null);

@@ -1,7 +1,7 @@
 package com.github.user3301.datastructures.Stack;
 
 /** stack interface  (LIFO) - last in first out
- * Created by Zhelun Gai on 20/5/17.
+ * Created by User3301 on 20/5/17.
  */
 public interface Stack<T> {
     /**

@@ -1,7 +1,7 @@
 package com.github.user3301.datastructures.Tree.BinarySearchTree;
 
 /**
- * Created by Zhelun Gai on 26/5/17.
+ * Created by User3301 on 26/5/17.
  */
 public class Node{
 

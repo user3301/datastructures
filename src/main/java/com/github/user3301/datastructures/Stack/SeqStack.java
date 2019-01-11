@@ -3,7 +3,7 @@ package com.github.user3301.datastructures.Stack;
 import java.util.EmptyStackException;
 
 /** implementation of sequence stack using array
- * Created by Zhelun Gai on 20/5/17.
+ * Created by User3301 on 20/5/17.
  */
 public class SeqStack<T> implements Stack<T> {
 
@@ -13,7 +13,6 @@ public class SeqStack<T> implements Stack<T> {
     private int size=0;
 
 
-    @Override
     public boolean isEmpty() {
         return this.top==-1;
     }
@@ -33,7 +32,6 @@ public class SeqStack<T> implements Stack<T> {
         this.array = (T[]) new Object[this.capacity];
     }
 
-    @Override
     public void push(T data) {
         if(array.length==size) {
             ensureCapacity(size=10);
@@ -57,7 +55,6 @@ public class SeqStack<T> implements Stack<T> {
      *
      * @return the element been pushed in last
      */
-    @Override
     public T peek() {
         if(isEmpty()) {
             new EmptyStackException();
@@ -66,7 +63,6 @@ public class SeqStack<T> implements Stack<T> {
     }
 
 
-    @Override
     public T pop() {
         if(isEmpty()) {
             new EmptyStackException();

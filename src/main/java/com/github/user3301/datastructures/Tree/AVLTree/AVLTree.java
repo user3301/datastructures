@@ -3,7 +3,7 @@ package com.github.user3301.datastructures.Tree.AVLTree;
 import static com.github.user3301.datastructures.Tree.AVLTree.AVLNode.height;
 
 /**
- * Created by Zhelun Gai on 28/5/17.
+ * Created by User3301 on 28/5/17.
  */
 
 public class AVLTree {
