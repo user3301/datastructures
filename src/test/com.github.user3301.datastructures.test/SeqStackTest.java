@@ -1,4 +1,4 @@
-package com.github.user3301.datastructures.Test;
+package Test;
 
 import com.github.user3301.datastructures.Stack.SeqStack;
 import org.junit.Test;

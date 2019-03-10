@@ -1,4 +1,4 @@
-package com.github.user3301.datastructures.Test;
+package Test;
 
 import com.github.user3301.datastructures.Tree.BinarySearchTree.BinarySearchTree;
 import com.github.user3301.datastructures.Tree.BinarySearchTree.Node;
