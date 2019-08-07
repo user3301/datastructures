@@ -1,4 +1,4 @@
-package Test;
+package com.github.user3301.datastructures.test;
 
 import com.github.user3301.datastructures.List.LinkedList.MyLinkedList;
 import org.junit.Test;
