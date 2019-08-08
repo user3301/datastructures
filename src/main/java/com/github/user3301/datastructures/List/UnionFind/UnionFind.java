@@ -1,5 +1,9 @@
 package com.github.user3301.datastructures.List.UnionFind;
 
+/**
+ * lazy union
+ *  zero optimization
+ */
 public class UnionFind {
     private int[] id;
     private int count;
