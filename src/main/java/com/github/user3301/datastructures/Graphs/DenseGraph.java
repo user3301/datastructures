@@ -50,11 +50,12 @@ public class DenseGraph {
     }
 
     public void printGraph() {
+        System.out.println("=================");
         for (int i = 0; i < graph.length; i++) {
             for (int j = 0; j < graph[i].length; j++) {
-                System.out.println(graph[i][j] + " ");
+                System.out.print(graph[i][j] + " ");
             }
-            System.out.println("/n");
+            System.out.println();
         }
     }
 }
